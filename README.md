@@ -9,3 +9,7 @@ This paper introduces the Absolute Variation Distance (AVD), a lightweight metri
 ## Ranking Distance Metric for Privacy Budget in Distributed Learning of Finite Embedding Data
 
 In this study, we show how privacy in a distributed FL setup is sensitive to the underlying finite embeddings of the confidential data. We show that privacy can be quantified for a client batch that uses either noise, or a mixture of finite embeddings, by introducing a normalised rank distance (d-rank). This measure has the advantage of taking into account the size of a finite vocabulary embedding, and align the privacy budget to a partitioned space. We further explore the impact of noise and client batch size on the privacy budget and compare it to the standard $\epsilon$ derived from Local-DP.
+
+## Instructions
+
+The files `AVD_example.py` and `DP_IMDB_example.py` contain examples for the AVD and the D-rank metrics/papers. The user can execute the files to see the results of d-rank in IMDB data and of AVD in MNIST dataset.
