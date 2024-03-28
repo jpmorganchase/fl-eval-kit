@@ -2,9 +2,8 @@
 # Georgios Papadopoulos, Yash Satsangi, Shaltiel Eloul, Marco Pistoia
 # JPMorgan Chase
 
-from abc import ABC
+from abc import ABC # TODO remove ABC it is not needed
 import numpy as np
-
 class BaseDP(ABC):
     def __init__(self, distribution: int="gaussian",
                  loc: float=.0, scale: float=1.0,
@@ -16,7 +15,7 @@ class BaseDP(ABC):
         self.random_key= random_key if random_key else 147
 
 
-    def add_noise_to_gradients(self, gradients):
+    def add_noise_to_gradients(self, gradients, seed=42):
         """
         Add noise to gradients using NumPy
 
@@ -28,7 +27,7 @@ class BaseDP(ABC):
         Returns:
             list of the gradients with noise added.
         """
-        rng = np.random.default_rng(self.random_key)
+        rng = np.random.default_rng(self.random_key, seed=seed)
 
         noised_gradients = []
         for grad in gradients:
