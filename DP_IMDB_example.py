@@ -1,6 +1,6 @@
 # ECIR 2024: Ranking Distance Metric for Privacy Budget in Distributed Learning of Finite Embedding Data
 # Georgios Papadopoulos, Yash Satsangi, Shaltiel Eloul, Marco Pistoia
-# JPMorgan Chase
+# JPMorgan - Global Tech. Applied Research
 
 from fl_eval_kit.d_rank.noisedp import NoiseDP
 from example_models.torch_NLP_models import SentimentRNN
