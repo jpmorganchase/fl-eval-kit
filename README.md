@@ -16,4 +16,4 @@ In this study, we show how privacy in a distributed FL setup is sensitive to the
 
 ## Instructions
 
-The files `AVD_example.py` and `DP_IMDB_example.py` contain examples for the AVD and the D-rank metrics/papers. The user can execute the files to see the results of d-rank in IMDB data and of AVD in MNIST dataset.
+The files `AVD_example.py` and `Drank_DP_example.py` contain examples for the AVD and the D-rank metrics/papers. The user can execute the files to see the results of d-rank in IMDB data and of AVD in MNIST dataset.
