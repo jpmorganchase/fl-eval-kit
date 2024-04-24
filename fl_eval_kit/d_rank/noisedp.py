@@ -8,7 +8,7 @@ import numpy as np
 import scipy
 from typing import List
 from fractions import Fraction
-from fl_eval_kit.d_rank.base import NoiseDP
+from fl_eval_kit.d_rank.base import BaseDP
 import torch
 
 def mean_absolute_difference(word_gradients, original_gradient):
@@ -61,7 +61,7 @@ def rank_calculation(A, B):
 
     return result
 
-class DrankDP(NoiseDP):
+class DrankDP(BaseDP):
     def __init__(self, vocab, gradient_vocab, distribution: str="gaussian",
                  loc: float=0, scale: float=1, random_key: int=None):
         self.vocab = vocab
