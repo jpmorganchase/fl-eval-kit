@@ -2,10 +2,10 @@
 # Georgios Papadopoulos, Yash Satsangi, Shaltiel Eloul, Marco Pistoia
 # JPMorgan Chase, 2024
 
+
 import numpy as np
 
-class NoiseDP:
-    """object for adding noise to gradients"""
+class BaseDP:
     def __init__(self, distribution: int="gaussian",
                  loc: float=.0, scale: float=1.0,
                  random_key: int=None):
@@ -22,7 +22,7 @@ class NoiseDP:
             self.random_key =np.random.randint(low=0,high=99999999999)
 
 
-    def add_noise_to_gradients(self, params):
+    def add_noise_to_gradients(self, gradients):
         """
         Add noise to gradients using NumPy
 
@@ -34,7 +34,8 @@ class NoiseDP:
         Returns:
             list of the gradients with noise added.
         """
-        self.rng = np.random.default_rng(self.random_key)
+        rng = np.random.default_rng(self.random_key)
+
         noised_gradients = []
         for grads in params:
             grad_shape = grads.shape

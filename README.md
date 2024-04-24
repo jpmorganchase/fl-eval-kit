@@ -1,6 +1,10 @@
 # Federated Learning Evaluation Kit (FL-Eval-Kit)
 
-The Federated Learning Evaluation Kit includes two components, the [Absolute Variation Distance](https://link.springer.com/chapter/10.1007/978-3-031-56066-8_20) and the [D-Rank metric](https://link.springer.com/chapter/10.1007/978-3-031-56066-8_21); both published in the Advances in Information Retrieval, 46th European Conference on Information Retrieval. 
+The Federated Learning Evaluation Kit includes two components, the [Absolute Variation Distance](https://link.springer.com/chapter/10.1007/978-3-031-56066-8_20) and the [D-Rank metric](https://link.springer.com/chapter/10.1007/978-3-031-56066-8_21); both published in the Advances in Information Retrieval, 46th European Conference on Information Retrieval.
+
+[1] Papadopoulos, G., Satsangi, Y., Eloul, S., Pistoia, M. (2024). Absolute Variation Distance: An Inversion Attack Evaluation Metric for Federated Learning. In: Goharian, N., et al. Advances in Information Retrieval. ECIR 2024. Lecture Notes in Computer Science, vol 14611. Springer, Cham. https://doi.org/10.1007/978-3-031-56066-8_20
+
+[2] Papadopoulos, G., Satsangi, Y., Eloul, S., Pistoia, M. (2024). Ranking Distance Metric for Privacy Budget in Distributed Learning of Finite Embedding Data. In: Goharian, N., et al. Advances in Information Retrieval. ECIR 2024. Lecture Notes in Computer Science, vol 14611. Springer, Cham. https://doi.org/10.1007/978-3-031-56066-8_21
 
 ## Absolute Variation Distance: An Inversion Attack Evaluation Metric for Federated Learning
 
