@@ -2,7 +2,7 @@
 # Georgios Papadopoulos, Yash Satsangi, Shaltiel Eloul, Marco Pistoia
 # JPMorgan - Global Tech. Applied Research
 
-from fl_eval_kit.d_rank.noisedp import NoiseDP
+from fl_eval_kit.d_rank.noisedp import DrankDP
 from example_models.torch_NLP_models import SentimentRNN
 from example_models.torch_NLP_data import LoadData
 
@@ -103,7 +103,7 @@ for e in range(epochs):
                 word = list(vocab.keys())[list(vocab.values()).index(t)]
                 single_word_grad = gradient_vocab[word]
 
-                privacy_model = NoiseDP()
+                privacy_model = DrankDP()
                 optim_noise = privacy_model.optimise_noisy_embedding(user_d_rank_threshold=0.96,
                                                        gradient_data=single_word_grad,
                                                        batch_size_k=10, vocab=gradient_vocab,
@@ -113,7 +113,7 @@ for e in range(epochs):
 
             average_optim_noise = np.mean(optim_noise_list)
 
-        privacy_model = NoiseDP(scale=average_optim_noise)
+        privacy_model = DrankDP(scale=average_optim_noise)
         _, private_grad_list = privacy_model.calculate_d_rank(gradient_data=gradient_list,
                                        batch_size_k=10,
                                        vocab=gradient_vocab, add_noise=True,
