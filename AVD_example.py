@@ -1,6 +1,6 @@
 # ECIR 2024: Absolute Variation Distance: an Inversion Attack Evaluation Metric for Federated Learning
 # Georgios Papadopoulos, Yash Satsangi, Shaltiel Eloul, Marco Pistoia
-# JPMorgan Chase
+# JPMorgan Chase, 2024
 
 from fl_eval_kit.avd.avd import AttackEvaluationMetrics
 import torch
